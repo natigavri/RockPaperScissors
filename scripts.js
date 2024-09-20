@@ -13,33 +13,33 @@ function getComputerChoice() {
     }
     return compChoice;
 }
+
 let humanScore = 0;
 let computerScore = 0;
 const playerScore = document.querySelector('#playerScore');
 const compScore = document.querySelector('#compScore');
+const winner = document.querySelector('.winner');
 
 function btnDisable() {
     let gameBtns = document.querySelectorAll('div.btns > button');
     for (button of gameBtns){
         button.disabled = true;
     }
-    }
+}
 
 function btnEnable() {
     let gameBtns = document.querySelectorAll('button');
     for (button of gameBtns){
         button.disabled = false;
     }
-    }
+}
 
 function resetGame() {
     btnEnable();
      humanScore = 0;
      computerScore = 0;
     scores();
-    const winner = document.querySelector('.winner');
     winner.textContent = "Choose one!";
-
 }
 
 resetBtn = document.querySelector('#resetGame');
@@ -53,9 +53,6 @@ function scores() {
 }
 
 function playGame() {
-
-    const winner = document.querySelector('.winner');
-
     function playRound(humanChoice, compChoice) {
         if (humanChoice == compChoice) {
             winner.textContent = "Draw";
