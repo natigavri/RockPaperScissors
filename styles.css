@@ -1,0 +1,120 @@
+/* Basic CSS Boilerplate */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* Base font size */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Arial, sans-serif; /* Base font family */
+    line-height: 1.6; /* Better readability */
+    color: #333; /* Default text color */
+    background-color: #f4f4f4; /* Background color */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: #222; /* Heading color */
+}
+
+/* Links */
+a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 1.5rem; /* Indent lists */
+}
+
+/* Images */
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Buttons */
+button {
+    font-size: large;
+    background-color: rgb(133, 133, 172); /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 0.5rem 1rem; /* Padding */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center; /* Center text */
+}
+
+.container {
+    max-width: 1200px; /* Container max width */
+    min-width: 100px;
+    margin: 0 auto; /* Center the container */
+    padding: 1rem; /* Padding */
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 100px;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #007BFF;
+    border:#0056b3 solid 4px;
+    max-width: fit-content;
+    color: #f4f4f4;
+    font-size: large;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.winner {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-width: 300px;
+    max-width: fit-content;
+    background-color: #007BFF;
+    color: #f4f4f4;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.score {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }

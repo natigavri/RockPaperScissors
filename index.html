@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="btns">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <div class="container text-center winner">Choose one!</div>
+    <div class="results container text-center">
+        <div class="player container">
+            <div class="score" id="playerScore">0</div>
+            <div id="playerTag">Player</div>
+        </div>
+        <div class="computer container">
+            <div class="score" id="compScore">0</div>
+            <div id="compTag">Computer</div>
+        </div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
