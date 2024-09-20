@@ -15,13 +15,37 @@ function getComputerChoice() {
 }
 let humanScore = 0;
 let computerScore = 0;
+const playerScore = document.querySelector('#playerScore');
+const compScore = document.querySelector('#compScore');
 
 function btnDisable() {
-    let gameBtns = document.querySelectorAll('button');
+    let gameBtns = document.querySelectorAll('div.btns > button');
     for (button of gameBtns){
         button.disabled = true;
     }
     }
+
+function btnEnable() {
+    let gameBtns = document.querySelectorAll('button');
+    for (button of gameBtns){
+        button.disabled = false;
+    }
+    }
+
+function resetGame() {
+    btnEnable();
+     humanScore = 0;
+     computerScore = 0;
+    scores();
+    const winner = document.querySelector('.winner');
+    winner.textContent = "Choose one!";
+
+}
+
+resetBtn = document.querySelector('#resetGame');
+resetBtn.addEventListener('click', (event) => {
+    resetGame();
+});
 
 function scores() {
     compScore.textContent = computerScore;
@@ -29,10 +53,8 @@ function scores() {
 }
 
 function playGame() {
-    const playerScore = document.querySelector('#playerScore');
-    const compScore = document.querySelector('#compScore');
-    const winner = document.querySelector('.winner');
 
+    const winner = document.querySelector('.winner');
 
     function playRound(humanChoice, compChoice) {
         if (humanChoice == compChoice) {
@@ -71,7 +93,17 @@ function playGame() {
     const btns = document.querySelector('.btns');
     btns.addEventListener('click', (event) => {
         let target = event.target;
-        playRound(target.id, getComputerChoice());
+        switch (target.id) {
+            case 'rock':
+                playRound('rock', getComputerChoice());
+                break;
+            case 'paper':
+                playRound('paper', getComputerChoice());
+                break;
+            case 'scissors':
+                playRound('scissors', getComputerChoice());
+                break;
+        }
         scores();
     });
 }

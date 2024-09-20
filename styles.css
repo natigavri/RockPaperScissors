@@ -118,3 +118,8 @@ button:hover {
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+.resetGame {
+    max-width: fit-content;
+    margin: 0 auto;
+}
